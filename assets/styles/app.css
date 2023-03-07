@@ -1,0 +1,11 @@
+body {
+    background-color: lightgray;
+}
+
+#product label {
+    width: 150px;
+}
+
+.btn {
+    border: 1px solid black!important;
+}
