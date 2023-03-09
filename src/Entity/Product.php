@@ -7,6 +7,7 @@ use ApiPlatform\Metadata\GetCollection;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 #[ApiResource(
@@ -29,14 +30,17 @@ class Product
 
     #[ORM\Column]
     #[Groups(['product:list', 'product:item'])]
+    #[Assert\PositiveOrZero]
     private ?int $storage_capacity = null;
 
     #[ORM\Column(nullable: true)]
     #[Groups(['product:list', 'product:item'])]
+    #[Assert\PositiveOrZero]
     private ?float $price = null;
 
     #[ORM\Column(nullable: true)]
     #[Groups(['product:list', 'product:item'])]
+    #[Assert\PositiveOrZero]
     private ?int $stock = null;
 
     public function getId(): ?int
