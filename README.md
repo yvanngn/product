@@ -1,5 +1,5 @@
 Accès à l'API :
-http://yvannguyen.qake7769.odns.fr/api/products
+http://yvannguyen.qake7769.odns.fr/api/products (obsolete)
 
 Accès au site :
 http://yvannguyen.qake7769.odns.fr/
